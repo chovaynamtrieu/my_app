@@ -1,1 +1,11 @@
-//test git clone
+const express = require("express");
+const homeRouter = require("./routers/homeRoute");
+
+const app = express();
+const port = 3000;
+
+app.use("/", homeRouter);
+
+app.listen(port, () => {
+  console.log(`Server is listening on port ${port}`);
+});
